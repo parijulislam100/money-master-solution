@@ -22,19 +22,6 @@ function getTotalCost(food,rent,clothes){
         return totalCost;
 }
 document.getElementById("calculate-btn").addEventListener("click",function(){
-    // const foodField = document.getElementById("food-field");
-    // const foodFieldTaka = parseFloat(foodField.value);
-    // const rentField = document.getElementById("rent-field");
-    // const rentFieldTaka = parseFloat(rentField.value);
-    // const clothesField = document.getElementById("clothes-field");
-    // const clothesFieldTaka =parseFloat(clothesField.value);
-    // const totalCostTaka = foodFieldTaka + rentFieldTaka + clothesFieldTaka;
-    // const totalExpensesTaka = document.getElementById("total-expenses");
-    // totalExpensesTaka.innerText = totalCostTaka;
-    // const incomeField = document.getElementById("income-field");
-    // const incomeFieldTaka = parseFloat(incomeField.value);
-    // const balance = document.getElementById("balance");
-    // balance.innerText = incomeFieldTaka - totalCostTaka;
     const totalCostAmount = getTotalCost(foodField.value,rentField.value,clothesField.value);
     if(incomeField.value < totalCostAmount){
         debugger;
@@ -54,7 +41,6 @@ document.getElementById("calculate-btn").addEventListener("click",function(){
 
 function savingCalculate(){
     const savingParcent = parseFloat(savingInput.value);
-    // console.log(savingAmount)
     const savingMoney = parseFloat(incomeField.value) * savingParcent / 100;
     if(parseFloat(savingMoney) > parseFloat(balance.innerText)){
         document.getElementById("saving-error").style.display = "block";
